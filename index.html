@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarthak's Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+     
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <h1 style="color:rgb(28, 23, 118)">Sarthak Dhanwate</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Homepage Section -->
+  <section id="home" class="home-section">
+    <div class="intro">
+      <h2>Hi, I'm <span style="color: rgb(224, 193, 19);">Sarthak Dhanwate</span></h2>
+
+      <h3><strong><u>Fullstack Developer & ML Enthusiast</u> </strong></h3>
+    </div>
+  
+
+    <div class="photo">
+      <img src="image.png" alt="Sarthak's Photo">
+    </div>
+  </section>
+  <section id="about me" class="about">
+    
+    <div class="about-me" id="about">
+        <h3><u>About Me</u></h3>
+        <p id="text" class="animated-text">
+          I am a passionate <span style="color:purple;">Fullstack Developer</span> with a strong interest in 
+          <span style="color:purple;">Machine Learning</span>. My goal is to create solutions that are not only 
+          functional but also intuitive and engaging for users. With a keen eye for detail and a problem-solving 
+          mindset, I enjoy tackling complex challenges and optimizing performance.
+      </p>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          let textElement = document.getElementById("text");
+          let text = textElement.innerText;
+          textElement.innerHTML = "";
+
+          text.split("").forEach((letter, index) => {
+              let span = document.createElement("span");
+              span.innerHTML = letter === " " ? "&nbsp;" : letter;
+              span.style.animationDelay = `${index * 50}ms`;
+              textElement.appendChild(span);
+          });
+        });
+        </script>
+        <button><a href="Sarthak_Dhanwate_Resume-pdf.pdf" class="resume-btn" target="_blank"><span style="color:white"> View My Resume</span> </a></button>
+      </div>
+  
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/sarthak-dhanwate-710864315/" target="_blank">
+            <img src="linkedin logo.webp" height="40px">
+        </a>
+        <a href="https://github.com/dsarthak0" target="_blank">
+            <img src="github new.png" height="40px">
+        </a>
+        <a href="https://leetcode.com" target="_blank">
+            <img src="leetcode new.jpg" height="40px">
+        </a>
+        <a href="mailto:sarthakdhanvate783@gmail.com">
+            <img src="Gmail.webp" height="45px">
+        </a>
+    </div>
+    
+  </section>
+
+  <!-- Projects Section -->
+  <!-- <section id="projects" class="projects-section"> -->
+    <h2 style="text-align: center;"><u>Projects</u></h2>
+
+    <div class="project-cards">
+      <div class="project-card">
+        <h4>
+          MERN: Food Ordering App 
+          <img src="food.png" style="width: 80px; height: 80px;">
+        </h4>
+        
+        <p style="color:rgb(20, 5, 18)">
+          -> Built an online food ordering platform using the MERN stack, enabling customers to browse and order food seamlessly.<br><br>
+          -> Developed user-friendly interfaces for browsing and ordering food.<br><br>
+          -> Developed RESTful APIs with Express.js for secure order and payment management.
+        </p>
+        
+        <!-- Container for images -->
+        <div style="display: flex; gap: 10px;">
+          <img src="react.png" style="width: 70px; height: 50px;">
+          <img src="express.png" style="width: 70px; height: 50px;">
+          <img src="Node.js.png" style="width: 70px; height: 50px;">
+          <img src="mongodb.png" style="width: 70px; height: 50px;">
+        </div>
+        
+        <h4><a href="https://github.com/dsarthak0/Mini_Project_FDA">GitHub</a></h4>
+        
+      </div>
+      <div class="project-card">
+        <h4>ML:Movie Recommendation System <img src="movie.png" style="width: 80px; height: 80px;"></h4>
+        
+        <p style="color:rgb(20, 5, 18)">->Developed a recommendation system that suggests movies based on user-selected preferences and trends.
+            <br> 
+            <br>
+            ->Analyzed movie datasets to find common patterns and improve recommendation accuracy.</p>
+            <div style="display: flex; gap: 10px;">
+              <img src="python.webp" style="width: 70px; height: 50px;">
+              <img src="jupyter.png" style="width: 70px; height: 50px;">
+              <img src="kaggle.png" style="width: 70px; height: 50px;">
+              <img src="html.png" style="width: 70px; height: 50px;">
+            </div>
+          <h4><a href="https://github.com/dsarthak0/Movie-recommendation-system">Github</a></h4>
+      </div>
+      <div class="project-card">
+        <h4>MERN and Landbot:Chatbot Based Ticket Booking System <img src="chatbot.png" style="width: 80px; height: 80px;" ></h4>
+        <p style="color:rgb(20, 5, 18)">->Created an intelligent chatbot for museum ticket bookings based on user-provided inputs such as dates and location.
+            <br>
+            <br>
+
+            ->Implemented email confirmation for bookings and manual override options
+            <br><br>
+            ->Designed a user-friendly interface for browsing popular events by city.</p>
+            <div style="display: flex; gap: 10px;">
+              <img src="landbot.png" style="width: 70px; height: 50px;">
+              <img src="express.png" style="width: 70px; height: 50px;">
+              <img src="Node.js.png" style="width: 70px; height: 50px;">
+              <img src="mongodb.png" style="width: 70px; height: 50px;">
+            </div>
+          <h4><a href="https://github.com/dsarthak0/SIH_2024_temp">Github</a></h4>
+      </div>
+      <div class="project-card">
+        <h4>Web Dev:Pharmacy <img src="pharmacy.png" style="width: 80px; height: 80px;"></h4>
+        <p style="color:rgb(20, 5, 18)">->Designed and developed a user-friendly e-commerce platform for pharmaceutical products
+            <br>
+            <br>
+            ->Created a MySQL database to store payment and user details securely.</p>
+            <div style="display: flex; gap: 10px;">
+              <img src="php.png" style="width: 70px; height: 50px;">
+              <img src="html.png" style="width: 70px; height: 50px;">
+              <img src="css.png" style="width:70px; height: 50px;">
+              <img src="JavaScript-logo.png" style="width: 70px; height: 50px;">
+              <img src="postgres.png" style="width: 70px; height: 50px;">
+            </div>
+            <h4> <a href="https://github.com/dsarthak0/E-commerce-Pharmacy" target="_blank">Github</a></h4>
+
+            
+      </div>
+      <!-- Add more projects as needed -->
+    </div>
+  <!-- </section> -->
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <h3><u>Skills</u></h3>
+    <ul>
+      <li> <img src="JavaScript-logo.png" height="40px"></=></li>
+      <li><img src="react.png" height="40px"></=></li>
+      <li><img src="Node.js.png" height="40px"></li>
+      <li><img src="python.webp" height="40px"></li>
+
+      <li><img src="cpp.png" height="40px"li>
+     
+      <li> <img src="mongodb.png" height="40px"></=></li>
+      <li><img src="postgres.png" height="40px"></=></li>
+      
+      <li><img src="java.png" height="40px"></li>
+      <li><img src="c.png" height="40px"></li>
+      <li><img src="express.png" height="40px"></li>
+      <li><img src="html.png" height="40px"></li>
+      <li><img src="css.png" height="40px"></li>
+    
+      <!-- Add more skills as needed -->
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+
+  <div class="container">
+    <style>
+      .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 800px;
+          margin: auto;
+      }
+      .contact-section {
+          flex: 1;
+          padding: 20px;
+      }
+      .form-container {
+          flex: 1;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      input, textarea {
+          width: 100%;
+          margin-top: 10px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+      button {
+          background-color: #007bff;
+          color: white;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      button:hover {
+          background-color: #0056b3;
+      }
+  </style>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h3><u>Contact Me</u></h3>
+        <p>Email: <a href="mailto:sarthakdhanvate783@gmail.com">sarthakdhanvate783@gmail.com</a></p>
+        <p>Phone: +91 9321278135</p>
+    </section>
+
+    <!-- Contact Form -->
+   
+ 
+</div>
+
+  <footer>
+    <p>&copy; 2025 Sarthak Dhanwate. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
