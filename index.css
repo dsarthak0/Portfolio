@@ -225,4 +225,92 @@ footer {
   font-size: 1.2rem;
 }
   
-  
+/* Responsive Design */
+
+/* For smaller screens, adjust font sizes and layout */
+@media (max-width: 1024px) {
+  nav {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+  .home-section h2 {
+    font-size: 3rem;
+  }
+  .home-section h3 {
+    font-size: 1.8rem;
+  }
+  .photo img {
+    width: 250px;
+  }
+  .about, .skills-section, .contact-section {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
+  .home-section {
+    height: auto;
+    padding: 50px 20px;
+  }
+  .home-section h2 {
+    font-size: 2.5rem;
+  }
+  .home-section h3 {
+    font-size: 1.5rem;
+  }
+  .photo img {
+    width: 200px;
+  }
+  .about, .skills-section, .contact-section {
+    padding: 40px;
+    font-size: 1.2rem;
+  }
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px;
+  }
+  .home-section h2 {
+    font-size: 2rem;
+  }
+  .home-section h3 {
+    font-size: 1.2rem;
+  }
+  .photo img {
+    width: 150px;
+  }
+  .about, .skills-section, .contact-section {
+    padding: 30px;
+    font-size: 1rem;
+  }
+  .project-card {
+    width: 100%;
+    padding: 20px;
+  }
+  .skills-section ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-section li {
+    width: 80%;
+    text-align: center;
+  }
+}
