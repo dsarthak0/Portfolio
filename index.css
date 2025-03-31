@@ -1,4 +1,10 @@
 /* Global Styles */
+*{
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -22,7 +28,7 @@ nav {
   opacity: 0;
   transform: translateY(10px);
   display: inline-block;
-  animation: fadeInUp 0.5s forwards;
+  animation: fadeInUp 0.01s forwards;
 }
 
 @keyframes fadeInUp {
@@ -90,7 +96,7 @@ nav {
 }
 
 .resume-btn {
-  background-color: black; /* Blue background */
+  /* Blue background */
  
 
   
