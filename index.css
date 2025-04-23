@@ -1,14 +1,13 @@
 /* Global Styles */
-*{
+* {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
   background: white;
   color: #333;
 }
@@ -18,29 +17,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(255, 255, 255);
+  background: white;
   padding: 15px 50px;
-  color: black;
   font-size: 1.2rem;
 }
 
-.animated-text span {
-  opacity: 0;
-  transform: translateY(10px);
-  display: inline-block;
-  animation: fadeInUp 0.01s forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-      opacity: 0;
-      transform: translateY(10px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
 .nav-links {
   list-style: none;
   display: flex;
@@ -52,23 +33,36 @@ nav {
   color: black;
   font-weight: bold;
   transition: color 0.3s;
-  font-size: 1.2rem;
 }
 
 .nav-links a:hover {
   color: white;
 }
 
+/* Animated Text */
+.animated-text span {
+  opacity: 0;
+  transform: translateY(10px);
+  display: inline-block;
+  animation: fadeInUp 0.000001s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Homepage */
 .home-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
-  background: white; 
-  color: black;
+  min-height: 70vh;
   text-align: center;
-  flex-direction: column;
+  padding: 60px 20px;
 }
 
 .home-section h2 {
@@ -87,33 +81,25 @@ nav {
   border: 5px solid white;
 }
 
-/* About Me */
+/* About Section */
 .about {
   text-align: center;
-  padding: 60px;
-  background: white;
+  padding: 60px 20px;
   font-size: 1.5rem;
 }
 
 .resume-btn {
-  /* Blue background */
- 
-
-  
   font-size: 16px;
   font-weight: bold;
- 
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .resume-btn a {
   text-decoration: none;
-  color: rgb(66, 31, 31); /* White text */
+  color: rgb(66, 31, 31);
   font-family: Arial, sans-serif;
 }
-
-
 
 /* Social Links */
 .social-links {
@@ -136,22 +122,18 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 60px black;
+  padding: 60px 20px;
 }
 
 .project-card {
-  background:rgb(251, 252, 252);
+  background: #fbfcfc;
   padding: 25px;
   border-radius: 15px;
   width: 320px;
-  
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s;
-  font-family: 'Poppins', sans-serif;
-  position: relative;
-  overflow: hidden;
   text-align: center;
-  
+  animation: fadeIn 0.6s ease-in-out;
 }
 
 .project-card:hover {
@@ -160,12 +142,12 @@ nav {
 }
 
 .project-card h4 {
+  font-size: 1.6rem;
+  color: #315f90;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-size: 1.6rem;
-  color: #315f90;
 }
 
 .project-card img {
@@ -176,24 +158,19 @@ nav {
 /* Animations */
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
-}
-
-.project-card {
-  animation: fadeIn 0.6s ease-in-out;
 }
 
 /* Skills */
 .skills-section {
   text-align: center;
-  padding: 60px;
-  background: white;
+  padding: 60px 20px;
   font-size: 1.5rem;
 }
 
@@ -203,7 +180,6 @@ nav {
   flex-wrap: wrap;
   gap: 20px;
   list-style: none;
-  padding: 0;
 }
 
 .skills-section li {
@@ -217,8 +193,7 @@ nav {
 /* Contact */
 .contact-section {
   text-align: center;
-  padding: 60px;
-  background:white;
+  padding: 60px 20px;
   font-size: 1.5rem;
 }
 
@@ -230,25 +205,32 @@ footer {
   color: white;
   font-size: 1.2rem;
 }
-  
-/* Responsive Design */
 
-/* For smaller screens, adjust font sizes and layout */
+/* ============================
+   Responsive Design
+============================ */
+
 @media (max-width: 1024px) {
   nav {
     padding: 15px 30px;
     font-size: 1rem;
   }
+
   .home-section h2 {
     font-size: 3rem;
   }
+
   .home-section h3 {
     font-size: 1.8rem;
   }
+
   .photo img {
     width: 250px;
   }
-  .about, .skills-section, .contact-section {
+
+  .about,
+  .skills-section,
+  .contact-section {
     font-size: 1.3rem;
   }
 }
@@ -256,67 +238,85 @@ footer {
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    align-items: center;
     text-align: center;
+    padding: 10px;
   }
+
   .nav-links {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     padding-top: 10px;
   }
-  .home-section {
-    height: auto;
-    padding: 50px 20px;
-  }
+
   .home-section h2 {
     font-size: 2.5rem;
   }
+
   .home-section h3 {
     font-size: 1.5rem;
   }
+
   .photo img {
     width: 200px;
   }
-  .about, .skills-section, .contact-section {
-    padding: 40px;
-    font-size: 1.2rem;
-  }
+
   .project-cards {
     flex-direction: column;
     align-items: center;
   }
+
   .project-card {
     width: 90%;
+    padding: 20px;
+  }
+
+  .skills-section ul {
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+    
+    
+  }
+
+  .skills-section li {
+    width: 80%;
+    text-align: center;
+  }
+
+  .about,
+  .skills-section,
+  .contact-section {
+    font-size: 1.2rem;
+    padding: 40px 20px;
   }
 }
 
 @media (max-width: 480px) {
-  nav {
-    padding: 10px;
-  }
   .home-section h2 {
     font-size: 2rem;
   }
+
   .home-section h3 {
     font-size: 1.2rem;
   }
+
   .photo img {
     width: 150px;
   }
-  .about, .skills-section, .contact-section {
-    padding: 30px;
+
+  .about,
+  .skills-section,
+  .contact-section {
     font-size: 1rem;
+    padding: 30px 15px;
   }
+
   .project-card {
     width: 100%;
-    padding: 20px;
-  }
-  .skills-section ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  .skills-section li {
-    width: 80%;
-    text-align: center;
   }
 }
