@@ -1,15 +1,27 @@
 /* Global Styles */
-* {
-  padding: 0;
+body {
+  background-color: black;
+  color: white;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: white;
-  color: #333;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure links inherit white text color */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffd700; /* gold on hover */
 }
 
 /* Navbar */
@@ -17,7 +29,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
+  background: black;
   padding: 15px 50px;
   font-size: 1.2rem;
 }
@@ -30,13 +42,13 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: white;
+  color: #ffd700;
 }
 
 /* Animated Text */
@@ -97,7 +109,7 @@ nav {
 
 .resume-btn a {
   text-decoration: none;
-  color: rgb(66, 31, 31);
+  color: white;
   font-family: Arial, sans-serif;
 }
 
@@ -112,7 +124,7 @@ nav {
 
 .social-links a {
   text-decoration: none;
-  color: #2C3E50;
+  color: white;
   font-weight: bold;
 }
 
@@ -126,7 +138,8 @@ nav {
 }
 
 .project-card {
-  background: #fbfcfc;
+  background: #030253;
+  color: white;
   padding: 25px;
   border-radius: 15px;
   width: 320px;
@@ -138,12 +151,12 @@ nav {
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(113, 28, 28, 0.4);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
 .project-card h4 {
   font-size: 1.6rem;
-  color: #315f90;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,8 +196,8 @@ nav {
 }
 
 .skills-section li {
-  background: white;
-  color: black;
+  background: #000000;
+  color: white;
   padding: 12px 18px;
   border-radius: 5px;
   font-size: 1.2rem;
@@ -201,7 +214,7 @@ nav {
 footer {
   text-align: center;
   padding: 20px;
-  background: #2C3E50;
+  background: #1a1a1a;
   color: white;
   font-size: 1.2rem;
 }
@@ -273,14 +286,11 @@ footer {
   }
 
   .skills-section ul {
-    
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     padding-top: 10px;
-    
-    
   }
 
   .skills-section li {
@@ -320,3 +330,4 @@ footer {
     width: 100%;
   }
 }
+
